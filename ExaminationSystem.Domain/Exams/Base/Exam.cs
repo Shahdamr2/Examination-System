@@ -1,0 +1,12 @@
+﻿using ExaminationSystem.Domain.Questions.Base;
+
+namespace ExaminationSystem.Domain.Exams.Base
+
+{
+    public abstract class Exam
+    {
+        public TimeSpan Time { get; set; }
+        public int NumOfQuestions { get; set; }
+        public Question[] Questions { get; set; }
+    }
+}
