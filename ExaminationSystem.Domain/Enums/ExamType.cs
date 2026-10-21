@@ -1,7 +1,8 @@
-﻿namespace ExaminationSystem.Domain.Enums;
+﻿
+namespace ExaminationSystem.Domain.Enums;
 
 public enum ExamType
 {
-    Final,
-    Practical
+    Practical = 1,
+    Final = 2
 }
