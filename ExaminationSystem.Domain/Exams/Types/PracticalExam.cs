@@ -38,10 +38,11 @@ public class PracticalExam : Exam
             Question question = Questions[i];
 
             Console.WriteLine($"\nQuestion {i + 1}: {question.Body}");
+            Console.WriteLine($"MCQ Question:    Mark {question.Mark}");
 
             foreach (var answer in question.AnswerList!)
             {
-                Console.WriteLine($"{answer.AnswerId}. {answer.AnswerText}");
+                Console.WriteLine($"{answer.AnswerId}- {answer.AnswerText}");
             }
 
             Console.Write("Enter Answer ID: ");
@@ -54,8 +55,7 @@ public class PracticalExam : Exam
                 Console.Write("Invalid Answer ID. Try again: ");
             }
 
-            var selectedAnswer = question.AnswerList!
-                .First(answer => answer.AnswerId == answerId);
+            var selectedAnswer = question.AnswerList!.First(answer => answer.AnswerId == answerId);
 
             studentAnswers[i] = selectedAnswer.AnswerText;
 
